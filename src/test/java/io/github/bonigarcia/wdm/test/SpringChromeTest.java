@@ -63,6 +63,8 @@ class SpringChromeTest {
     void setupTest() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
+
+//        options.addArguments("--headless");//隐藏浏览器
         driver = new ChromeDriver(options);
     }
 
@@ -79,26 +81,19 @@ class SpringChromeTest {
     void test(String username) {
 
         // Open system under test
-        driver.get("https://coding.imooc.com/class/303.html");
+        driver.get("https://www.baidu.com/");
         System.out.println("username="+username);
-//        // Verify first page title
-//        String firstPageTitle = driver.getTitle();
-//        String expectedFirstPageTitle = "Spring Boot Test - Page 1";
-//        assertEquals(expectedFirstPageTitle, firstPageTitle);
-//
-//        // Click on link
-//        driver.findElement(By.linkText("another")).click();
-//
-//        // Verify second page caption
-//        String secondPageCaption = driver.findElement(By.id("caption"))
-//                .getText();
-//        String expectedSecondPageTitle = "Other page";
-//        assertEquals(expectedSecondPageTitle, secondPageCaption);
+
         try {
             Thread.sleep(1000);
-            WebElement element = driver.findElement(By.id("js-signin-btn"));
-            element.click();
-            Thread.sleep(1000);
+            WebElement kw = driver.findElement(By.id("kw"));
+            kw.sendKeys("this is test");
+
+            Thread.sleep(3000);
+            WebElement su = driver.findElement(By.id("su"));
+
+            su.click();
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

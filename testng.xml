@@ -6,16 +6,15 @@
 <!--        <listener class-name="com.googlecode.reportng.ReportNgListener" />-->
     </listeners>
     <parameter name="testCase" value="4520"/>
-    <test verbose="2" preserve-order="true"
-          name="C:/Users/Administrator/Desktop/webdrivermanager-spring-boot-master/src/test/java/io/github/bonigarcia/wdm/test/SpringChromeTest.java">
+    <test name="MyTest">
         <classes>
-            <class name="io.github.bonigarcia.wdm.test.SpringChromeTest">
+            <class name="io.github.bonigarcia.wdm.test.SpringChromeTest" >
                 <parameter name="username" value="Mushishi_xu@163.com"/>
-
                 <methods>
                     <include name="test"/>
                 </methods>
             </class>
         </classes>
     </test>
+
 </suite>
