@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+<!--        <listener class-name="com.googlecode.rendering.RenderingListener" />-->
+<!--        <listener class-name="com.googlecode.reportng.ReportNgListener" />-->
+    </listeners>
+    <parameter name="testCase" value="4520"/>
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Administrator/Desktop/webdrivermanager-spring-boot-master/src/test/java/io/github/bonigarcia/wdm/test/SpringChromeTest.java">
+        <classes>
+            <class name="io.github.bonigarcia.wdm.test.SpringChromeTest">
+                <parameter name="username" value="Mushishi_xu@163.com"/>
+
+                <methods>
+                    <include name="test"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
